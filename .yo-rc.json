@@ -1,0 +1,29 @@
+{
+  "generator-angularjs-library": {
+    "props": {
+      "author": {
+        "name": "Karthikeyan VK",
+        "email": "karthik_3030@yahoo.com"
+      },
+      "libraryName": {
+        "original": "sample-library",
+        "camelized": "sampleLibrary",
+        "dasherized": "sample-library",
+        "slugified": "sample-library",
+        "parts": [
+          "sample",
+          "library"
+        ]
+      },
+      "includeModuleDirectives": true,
+      "includeModuleFilters": false,
+      "includeModuleServices": true,
+      "includeAngularModuleResource": false,
+      "includeAngularModuleCookies": true,
+      "includeAngularModuleSanitize": true,
+      "librarySrcDirectory": "src/sample-library",
+      "libraryUnitTestDirectory": "test/unit/sample-library",
+      "libraryUnitE2eDirectory": "test/e2e/sample-library"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0106)http://www.jqueryscript.net/demo/jQuery-Plugin-For-Newspaper-Column-Layout-Columnizer/samples/sample1.html -->
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Columnizer JQuery Plugin sample page</title>
+  <meta name="author" content="Adam Wulf, Matt Wilson">
+  <!-- Date: 2008-07-12 -->
+  <style>
+    .column p, .column h1 {
+      padding: 5px;
+    }
+
+    body {
+      font-size: 9pt;
+    }
+
+    #wrapper {
+      margin: 0px 100px;
+    }
+
+    .wide, .thin {
+      clear: both;
+    }
+  </style>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+
+
+  <script src="../bower/jspdf/dist/jspdf.min.js"></script>
+  <script src="../bower/FlamencoJSPDF/dist/jspdf.min.js"></script>
+  <script src="../bower/html2canvas/build/html2canvas.js"></script>
+  <script src="../bower/jquery.columnizer/src/jquery.columnizer.js"></script>
+  <script src="../bower/canvg/dist/canvg.bundle.min.js"></script>
+  <script src="../dist/angular-ultimate-jspdf.js"></script>
+  <script src="controller/columnizer-sample.js"></script>
+  <script>
+    $(function () {
+      $('.wide').columnize({width: 400});
+      $('.thin').columnize({width: 200});
+    });
+  </script>
+</head>
+<body >
+<div ng-app="demo">
+<div ng-controller="columnizerSample">
+  <div class="tile half tab" pdf-generator content="reportHtml"
+       tooltip="Export to PDF" tooltip-trigger tooltip-animation="false" tooltip-placement="bottom">
+    <div class="fa fa-file-pdf-o fa-3x"></div>
+  </div>
+  <div id="reportHtml" class="page-size" columnize-data="{{columnizeData}}"
+       report-generator="true">
+    <CENTER>
+      <H1>A Simple Sample Web Page</H1>
+
+
+      <IMG SRC="https://www.gstatic.com/webp/gallery3/3.png" height="200px" width="250px">
+
+
+      <H4>Sample Page</H4>
+
+      <H2>Demonstrating a few HTML features</H2>
+
+    </CENTER>
+
+    HTML is really a very simple language. It consists of ordinary text, with commands that are enclosed by "<" and ">"
+    characters, or bewteen an "&" and a ";". <P>
+
+
+    You don't really need to know much HTML to create a page, because you can copy bits of HTML from other pages that do
+    what you want, then change the text!
+
+    <P>
+
+
+      This page shows on the left as it appears in your browser, and the corresponding HTML code appears on the right.
+      The
+      HTML commands are linked to explanations of what they do.
+
+
+    <H3>Line Breaks</H3>
+
+    HTML doesn't normally use line breaks for ordinary text. A white space of any size is treated as a single space.
+    This is
+    because the author of the page has no way of knowing the size of the reader's screen, or what size type they will
+    have
+    their browser set for.<P>
+
+
+    If you want to put a line break at a particular place, you can use the "<BR>" command, or, for a paragraph break,
+    the
+    "
+
+    <P>" command, which will insert a blank line. The heading command ("<4></4>") puts a blank line above and below the
+    heading text.
+
+
+    <H4>Starting and Stopping Commands</H4>
+
+    Most HTML commands come in pairs: for example, "<H4>" marks the beginning of a size 4 heading, and "</H4>" marks the
+    end
+    of it. The closing command is always the same as the opening command, except for the addition of the "/".<P>
+
+
+    Modifiers are sometimes included along with the basic command, inside the opening command's < >. The modifier does
+    not
+    need to be repeated in the closing command.
+
+
+    <H1>This is a size "1" heading</H1>
+    <H2>This is a size "2" heading</H2>
+    <H3>This is a size "3" heading</H3>
+    <H4>This is a size "4" heading</H4>
+    <H5>This is a size "5" heading</H5>
+    <H6>This is a size "6" heading</H6>
+  </div>
+</div>
+</div>
+</body>
+</html>
